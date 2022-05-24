@@ -1,0 +1,32 @@
+/**
+ * extends Account
+ * 
+ * @author LC PC
+ *
+ */
+public class ChequingAccount extends Account {
+	// non-ar constructor
+	ChequingAccount() {
+	}
+	/**
+	 * overloaded cosntructor
+	 * @param accNum
+	 * @param accHolder
+	 * @param balance
+	 */
+	ChequingAccount(long accNum,Person accHolder,double balance){
+		this.accHolder = accHolder;
+		this.accNum = accNum;
+		this.balance = balance;
+	}
+
+	/**
+	 * update the balance override abstract method
+	 * 
+	 * @Override
+	 */
+	public void balanceUpdate() {
+		balance -= FEE;
+	}
+
+}
